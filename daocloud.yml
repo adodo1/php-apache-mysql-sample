@@ -1,6 +1,6 @@
 version: 2.0
 test:
-  image: daocloud/ci-php:5.5
+  image: daocloud.io/php:5.6-apache
   
   services:
     - mysql
@@ -13,8 +13,8 @@ test:
   install:
     - docker-php-ext-install pdo_mysql
   
-  #script:
-  #  - phpunit DBTest
+  script:
+    - phpunit DBTest
 
 build:
   image:
